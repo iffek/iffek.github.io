@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="蜜桃社区 - 汇聚优质图文、视频与社区互动内容，提供多元化的生活资讯、娱乐分享与用户交流空间。">
+    <meta name="keywords" content="蜜桃社区,社区,图文,视频,互动,资讯">
+    <title>蜜桃社区-优质图文视频内容与互动社区平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b81;
+            --primary-hover: #ff4757;
+            --secondary-color: #2f3542;
+            --bg-color: #f1f2f6;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-sub: #747d8c;
+            --border-radius: 12px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 16px rgba(0,0,0,0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary-color);
+            border-radius: 3px 3px 0 0;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin: 30px 0;
+            position: relative;
+            height: 400px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            z-index: 2;
+            padding: 40px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.25);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 14px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Main Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Content Feed */
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 22px;
+            background-color: var(--primary-color);
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+
+        .post-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            gap: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .post-thumb {
+            width: 180px;
+            height: 120px;
+            background-color: #dfe4ea;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .post-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .post-title:hover {
+            color: var(--primary-color);
+        }
+
+        .post-excerpt {
+            color: var(--text-sub);
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .post-meta {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .author-avatar {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .widget-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .rank-num {
+            width: 20px;
+            height: 20px;
+            background-color: #f1f2f6;
+            color: var(--text-sub);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            margin-right: 10px;
+            font-size: 12px;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background-color: #ff4757; color: white; }
+        .rank-list li:nth-child(2) .rank-num { background-color: #ffa502; color: white; }
+        .rank-list li:nth-child(3) .rank-num { background-color: #2ed573; color: white; }
+
+        .rank-link {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag-cloud a {
+            background: #f1f2f6;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: var(--text-main);
+        }
+
+        .tag-cloud a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Video Section */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .video-thumb {
+            width: 100%;
+            height: 160px;
+            background-color: #dfe4ea;
+            position: relative;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(0,0,0,0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .video-stats {
+            font-size: 12px;
+            color: var(--text-sub);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #dfe4ea;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #a4b0be;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .post-card {
+                flex-direction: column;
+            }
+
+            .post-thumb {
+                width: 100%;
+                height: 200px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                蜜桃社区
+                <span>MiTao Community</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">图文资讯</a></li>
+                    <li><a href="#">热门视频</a></li>
+                    <li><a href="#">影视专区</a></li>
+                    <li><a href="#">用户社区</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>探索多元内容，连接你我生活</h1>
+                <p>汇聚全网优质图文、短视频与深度资讯，打造最具活力的互动社区平台</p>
+                <div class="hero-tags">
+                    <span class="tag"># 生活百科</span>
+                    <span class="tag"># 科技数码</span>
+                    <span class="tag"># 影视娱乐</span>
+                    <span class="tag"># 职场干货</span>
+                    <span class="tag"># 旅行攻略</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="main-layout">
+            <!-- Left Content -->
+            <div class="content-area">
+                <div class="section-title">
+                    <h2>最新发布</h2>
+                    <a href="#" style="font-size: 14px; color: var(--text-sub);">查看更多 &rarr;</a>
+                </div>
+
+                <!-- Article List -->
+                <article class="post-card">
+                    <img src="https://picsum.photos/seed/tech/180/120" alt="封面图" class="post-thumb">
+                    <div class="post-content">
+                        <h3 class="post-title"><a href="#">2024年最值得期待的科技产品盘点与评测</a></h3>
+                        <p class="post-excerpt">随着科技的飞速发展，今年的电子产品市场迎来了前所未有的创新浪潮。从折叠屏手机的迭代到人工智能的深度应用，我们为您整理了最全面的选购指南...</p>
+                        <div class="post-meta">
+                            <div class="author">
+                                <img src="https://picsum.photos/seed/u1/20/20" alt="头像" class="author-avatar">
+                                <span>科技观察员</span>
+                            </div>
+                            <span>• 2小时前</span>
+                            <span>• 523 阅读</span>
+                            <span>• 32 评论</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <img src="https://picsum.photos/seed/travel/180/120" alt="封面图" class="post-thumb">
+                    <div class="post-content">
+                        <h3 class="post-title"><a href="#">周末逃离城市计划：寻找周边的静谧秘境</a></h3>
+                        <p class="post-excerpt">在这个快节奏的时代，周末的短途旅行成为了许多人放松身心的首选。我们为您精选了三个距离城市仅一小时车程的绝美露营地，带上家人一起去感受大自然的魅力吧...</p>
+                        <div class="post-meta">
+                            <div class="author">
+                                <img src="https://picsum.photos/seed/u2/20/20" alt="头像" class="author-avatar">
+                                <span>旅行达人阿杰</span>
+                            </div>
+                            <span>• 5小时前</span>
+                            <span>• 1.2k 阅读</span>
+                            <span>• 108 评论</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <img src="https://picsum.photos/seed/food/180/120" alt="封面图" class="post-thumb">
+                    <div class="post-content">
+                        <h3 class="post-title"><a href="#">十分钟快手早餐：开启活力满满的一天</a></h3>
+                        <p class="post-excerpt">早餐是一天中最重要的一餐，但对于忙碌的上班族来说，时间总是不够用。这里有三款简单易做、营养均衡的快手早餐食谱，让你在十分钟内轻松搞定...</p>
+                        <div class="post-meta">
+                            <div class="author">
+                                <img src="https://picsum.photos/seed/u3/20/20" alt="头像" class="author-avatar">
+                                <span>美食研究所</span>
+                            </div>
+                            <span>• 昨天</span>
+                            <span>• 3.4k 阅读</span>
+                            <span>• 56 评论</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <img src="https://picsum.photos/seed/art/180/120" alt="封面图" class="post-thumb">
+                    <div class="post-content">
+                        <h3 class="post-title"><a href="#">当代年轻人的生活方式调查报告</a></h3>
+                        <p class="post-excerpt">近期发布的社区调查报告显示，当代年轻人的消费观念和生活方式正在发生深刻变化。从“断舍离”到“极简主义”，我们深入分析了这一趋势背后的社会原因...</p>
+                        <div class="post-meta">
+                            <div class="author">
+                                <img src="https://picsum.photos/seed/u4/20/20" alt="头像" class="author-avatar">
+                                <span>社会观察</span>
+                            </div>
+                            <span>• 昨天</span>
+                            <span>• 890 阅读</span>
+                            <span>• 45 评论</span>
+                        </div>
+                    </div>
+                </article>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-outline" style="width: 200px;">加载更多内容</button>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门排行榜</h3>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-num">1</span>
+                            <a href="#" class="rank-link">2024年全球热门旅游目的地榜单</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">2</span>
+                            <a href="#" class="rank-link">如何高效管理你的个人时间？</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">3</span>
+                            <a href="#" class="rank-link">极简主义生活：从整理开始</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <a href="#" class="rank-link">最新款智能手机横评对比</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <a href="#" class="rank-link">家常菜谱：红烧肉的秘制配方</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">6</span>
+                            <a href="#" class="rank-link">电影《星际穿越》深度解析</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门标签</h3>
+                    <div class="tag-cloud">
+                        <a href="#">数码科技</a>
+                        <a href="#">美食烹饪</a>
+                        <a href="#">影视影评</a>
+                        <a href="#">职场技能</a>
+                        <a href="#">健康养生</a>
+                        <a href="#">时尚穿搭</a>
+                        <a href="#">萌宠日常</a>
+                        <a href="#">旅行摄影</a>
+                        <a href="#">读书笔记</a>
+                        <a href="#">数码科技</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); color: white;">
+                    <h3 class="widget-title" style="border-bottom-color: rgba(255,255,255,0.3);">加入我们</h3>
+                    <p style="font-size: 13px; margin-bottom: 15px; opacity: 0.9;">注册成为社区会员，参与话题讨论，分享您的精彩瞬间，赢取积分奖励。</p>
+                    <button class="btn" style="background: white; color: var(--primary-color); width: 100%;">立即注册</button>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Video Section -->
+        <section>
+            <div class="section-title">
+                <h2>热门视频</h2>
+                <a href="#" style="font-size: 14px; color: var(--text-sub);">更多视频 &rarr;</a>
+            </div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://picsum.photos/seed/v1/300/160" alt="视频封面" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">城市夜景延时摄影合集</h4>
+                        <div class="video-stats">
+                            <span>12.5万次观看</span>
+                            <span>2天前</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://picsum.photos/seed/v2/300/160" alt="视频封面" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">DIY手工制作：木质相框</h4>
+                        <div class="video-stats">
+                            <span>8.3万次观看</span>
+                            <span>5天前</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://picsum.photos/seed/v3/300/160" alt="视频封面" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">新手健身指南：在家也能练</h4>
+                        <div class="video-stats">
+                            <span>25万次观看</span>
+                            <span>1周前</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://picsum.photos/seed/v4/300/160" alt="视频封面" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <h4 class="video-title">探店：藏在巷子里的咖啡馆</h4>
+                        <div class="video-stats">
+                            <span>5.6万次观看</span>
+                            <span>3天前</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>关于蜜桃社区</h3>
+                    <p style="font-size: 14px; line-height: 1.8; opacity: 0.8;">
+                        蜜桃社区致力于为用户提供高质量的内容分享与互动平台。我们汇聚了来自各行各业的创作者，分享生活点滴、专业知识与娱乐资讯。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">加入创作者</a></li>
+                        <li><a href="#">社区规范</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>热门分类</h3>
+                    <ul>
+                        <li><a href="#">科技数码</a></li>
+                        <li><a href="#">生活百科</a></li>
+                        <li><a href="#">影视娱乐</a></li>
+                        <li><a href="#">美食烹饪</a></li>
+                        <li><a href="#">旅行户外</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>关注我们</h3>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">抖音号</a></li>
+                        <li><a href="#">Bilibili</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 蜜桃社区 版权所有 | 仅供展示用途</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                          </html>
