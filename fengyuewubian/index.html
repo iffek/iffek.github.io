@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风月无边是醉乡 - 古风诗词意境与传统文化赏析</title>
+    <meta name="description" content="风月无边是醉乡 - 深入解析古诗词中‘风月无边’的意境美学，探讨古典文学中的醉乡文化、饮酒诗词赏析及传统文人生活方式，提供沉浸式古风阅读体验。">
+    <meta name="keywords" content="风月无边, 醉乡, 古风诗词, 饮酒文化, 中国传统文化, 诗词赏析">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --secondary-color: #2c3e50;
+            --accent-color: #d35400;
+            --bg-color: #fdfbf7;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Georgia", serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            margin-left: 10px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: normal;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/nightview/1920/1080.jpg') no-repeat center center/cover;
+            color: white;
+            margin-bottom: 3rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeIn Up 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            font-family: "KaiTi", "STKaiti", serif;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: transform 0.2s, background-color 0.2s;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Section Styling */
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background-color: #eee;
+            margin-left: 1rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            color: var(--secondary-color);
+        }
+
+        .card-text {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: #f0f0f0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+        }
+
+        .tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .quote-box {
+            font-family: "KaiTi", "STKaiti", serif;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            text-align: center;
+            border: 1px solid #eee;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+        }
+
+        /* Detail Section (Poetry) */
+        .poem-section {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+            margin-bottom: 2rem;
+        }
+
+        .poem-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: "KaiTi", "STKaiti", serif;
+        }
+
+        .poem-author {
+            text-align: center;
+            color: #888;
+            margin-bottom: 2rem;
+        }
+
+        .poem-content {
+            font-family: "KaiTi", "STKaiti", serif;
+            font-size: 1.4rem;
+            line-height: 2.5;
+            text-align: center;
+            color: var(--secondary-color);
+        }
+
+        .poem-content p {
+            margin-bottom: 1rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: var(--border-radius);
+            border: 1px solid #f0f0f0;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">风月无边是醉乡<span>· 古韵雅集</span></a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">诗词赏析</a></li>
+                <li><a href="#">典故溯源</a></li>
+                <li><a href="#">文化专栏</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>风月无边是醉乡</h1>
+            <p>探寻古典文学中的极致意境，在酒香与诗情中寻找心灵的栖息地。</p>
+            <a href="#poetry" class="btn">开始品读</a>
+        </div>
+    </section>
+
+    <!-- Intro Features -->
+    <section class="features-grid">
+        <article class="feature-item">
+            <span class="feature-icon">📜</span>
+            <h3 class="feature-title">诗词溯源</h3>
+            <p class="feature-desc">从“风月无边”的典故看古人审美，解读“醉乡”背后的文化隐喻。</p>
+        </article>
+        <article class="feature-item">
+            <span class="feature-icon">🍶</span>
+            <h3 class="feature-title">酒文化</h3>
+            <p class="feature-desc">解析古代文人雅士的饮酒习俗，探讨酒在文学创作中的催化作用。</p>
+        </article>
+        <article class="feature-item">
+            <span class="feature-icon">🍃</span>
+            <h3 class="feature-title">意境美学</h3>
+            <p class="feature-desc">赏析名篇中的留白艺术，感受“醉”与“醒”之间的哲学境界。</p>
+        </article>
+    </section>
+
+    <!-- Main Content: Poetry & Analysis -->
+    <div class="main-grid">
+        <section id="poetry">
+            <h2 class="section-title">经典赏析</h2>
+            
+            <article class="poem-section">
+                <h3 class="poem-title">题扬州禅智寺</h3>
+                <p class="poem-author">唐·杜牧</p>
+                <div class="poem-content">
+                    <p>雨过一蝉噪，飘萧松桂秋。</p>
+                    <p>青苔满阶绿，草木半成阴。</p>
+                    <p>独坐幽篁里，弹琴复长啸。</p>
+                    <p>深林人不知，明月来相照。</p>
+                </div>
+            </article>
+
+            <article class="poem-section">
+                <h3 class="poem-title">望江南·超然台作</h3>
+                <p class="poem-author">宋·苏轼</p>
+                <div class="poem-content">
+                    <p>春未老，风细柳斜斜。</p>
+                    <p>试上超然台上看，半壕春水一城花。</p>
+                    <p>烟雨暗千家。</p>
+                    <p>寒食后，酒醒却咨嗟。</p>
+                    <p>休对故人思故国，且将新火试新茶。</p>
+                    <p>诗酒趁年华。</p>
+                </div>
+            </article>
+        </section>
+
+        <aside>
+            <div class="sidebar-widget">
+                <h3 class="feature-title" style="text-align:center;">热门关键词</h3>
+                <div class="tag-cloud">
+                    <a href="#" class="tag">李白</a>
+                    <a href="#" class="tag">杜甫</a>
+                    <a href="#" class="tag">苏轼</a>
+                    <a href="#" class="tag">李清照</a>
+                    <a href="#" class="tag">酒令</a>
+                    <a href="#" class="tag">茶道</a>
+                    <a href="#" class="tag">禅意</a>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="feature-title" style="text-align:center;">每日一语</h3>
+                <div class="quote-box">
+                    “醉翁之意不在酒，在乎山水之间也。”<br>
+                    —— 欧阳修《醉翁亭记》
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <img src="https://picsum.photos/seed/tea/400/300.jpg" alt="茶与酒" style="width:100%; border-radius:4px; margin-bottom:1rem;">
+                <h4 style="margin-bottom:0.5rem;">茶酒人生</h4>
+                <p style="font-size:0.9rem; color:#666;">古人云：茶温润而养心，酒热烈而忘忧。二者皆是“醉乡”之外的心灵寄托。</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Detailed Content Area -->
+    <section class="content-area">
+        <h2 class="section-title">深度解析：何为“风月无边”</h2>
+        <article style="margin-bottom: 2rem;">
+            <h3 style="font-size:1.5rem; margin-bottom:1rem; color:var(--secondary-color);">意境的极致表达</h3>
+            <p style="margin-bottom:1rem; text-align:justify;">
+                “风月无边”这一成语，源自对自然景色的极致赞美。它并非单纯指代风和月亮，而是借指天地间无穷无尽的美景与生机。在古诗词中，这种意境往往与“醉乡”紧密相连。当文人在现实中感到束缚或仕途失意时，便寄情于山水，借酒浇愁，进入一个精神上的自由国度——“醉乡”。
+            </p>
+            <p style="margin-bottom:1rem; text-align:justify;">
+                这种“醉”并非沉沦，而是一种审美上的超越。在醉乡中，风月不再是客观的自然物象，而是成为了诗人内心世界的投射。正如欧阳修在《醉翁亭记》中所言，真正的“醉”在于与民同乐，在于欣赏山水之美，从而达到一种物我两忘、超然物外的精神境界。
+            </p>
+        </article>
+
+        <h2 class="section-title">常见误区与正确理解</h2>
+        <article>
+            <p style="margin-bottom:1rem; text-align:justify;">
+                在现代语境下，容易将“风月无边”狭隘地理解为男女之情或单纯的享乐。然而，在传统文化语境下，它更多指的是一种豁达、开阔的心胸。真正的“醉乡”是留给那些内心丰富、灵魂自由的人的。
+            </p>
+            <p style="margin-bottom:1rem; text-align:justify;">
+                现代人虽无古人之酒，但可以寻得心中的“醉乡”。无论是通过阅读经典诗词，还是沉浸在自然风光中，都能获得片刻的宁静与升华。这便是“风月无边是醉乡”这一主题对当代人的启示。
+            </p>
+        </article>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>关于本站</h3>
+                <p style="font-size:0.9rem; line-height:1.6;">风月无边是醉乡致力于弘扬中华优秀传统文化，通过诗词赏析与典故解读，带您领略古人的精神世界。</p>
+            </div>
+            <div class="footer-col">
+                <h3>栏目导航</h3>
+                <ul>
+                    <li><a href="#">诗词大全</a></li>
+                    <li><a href="#">成语典故</a></li>
+                    <li><a href="#">古文观止</a></li>
+                    <li><a href="#">书法艺术</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>联系我们</h3>
+                <ul>
+                    <li>邮箱：contact@example.com</li>
+                    <li>地址：中国 · 古韵文化区</li>
+                    <li>关注我们：微信公众号</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 风月无边是醉乡文化网. 保留所有权利.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
