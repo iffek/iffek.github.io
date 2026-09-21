@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桀纣 - 夏商历史人物与商周变革深度解析</title>
+    <meta name="description" content="桀纣专题网站：深入解析夏朝末代君主夏桀与商朝末代君主商纣的历史形象、暴政表现、妲己传说、牧野之战及商周变革。提供详尽的历史文献考证与现代视角分析。">
+    <meta name="keywords" content="桀纣, 夏桀, 商纣, 妲己, 牧野之战, 商周变革, 中国古代历史, 夏商周断代工程">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B0000; /* 深红，象征暴政与战争 */
+            --secondary-color: #2C3E50; /* 深蓝灰，象征历史与严肃 */
+            --accent-color: #D4AF37; /* 金色，象征青铜时代 */
+            --bg-color: #F9F7F2; /* 米色纸张质感 */
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            border: 2px solid var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--secondary-color);
+            font-size: 16px;
+        }
+
+        nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/ancientchina/1600/900') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #a50000;
+        }
+
+        /* 核心概念区 */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .profile-card.jie {
+            border-top-color: #8B0000;
+        }
+
+        .profile-card.zhou {
+            border-top-color: #A52A2A;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #eee;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        .profile-info h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .profile-info .title {
+            color: var(--text-light);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .profile-content h4 {
+            margin: 20px 0 10px;
+            color: var(--secondary-color);
+        }
+
+        .profile-content p {
+            color: var(--text-light);
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        /* 历史背景与时间线 */
+        .timeline-section {
+            background-color: #fff;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--bg-color);
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
+        .content-box {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .content-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* 暴政与传说 */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        /* 商周变革 */
+        .change-section {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .change-section .section-title h2 {
+            color: white;
+        }
+
+        .change-section .section-title p {
+            color: #aaa;
+        }
+
+        .change-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .change-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .change-text ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .change-text li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .change-text li::before {
+            content: '✔';
+            color: var(--accent-color);
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .change-image {
+            position: relative;
+        }
+
+        .change-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        /* 常见问题 */
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background-color: #fafafa;
+            color: var(--text-light);
+        }
+
+        .faq-answer p {
+            padding: 20px 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 20px 20px;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: '+';
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 14px;
+        }
+
+        /* 响应式设计 */
+        @media screen and (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .left::before, .right::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            .right {
+                left: 0%;
+            }
+
+            .change-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 头部导航 -->
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>桀纣</span> 历史
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#profiles" class="active">人物档案</a></li>
+                    <li><a href="#timeline">历史脉络</a></li>
+                    <li><a href="#features">暴政与传说</a></li>
+                    <li><a href="#change">商周变革</a></li>
+                    <li><a href="#faq">常见问答</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>夏桀与商纣：暴君的兴衰与商周变革</h1>
+            <p>深入探索中国古代历史上最具争议的两位君主，从统治危机到牧野之战，解析夏商更替的历史必然性与文化转折。</p>
+            <a href="#profiles" class="btn">开始探索</a>
+        </div>
+    </section>
+
+    <!-- 人物档案 -->
+    <section id="profiles" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>历史人物档案</h2>
+                <p>夏朝与商朝末代君主的历史形象与生平概要</p>
+            </div>
+            <div class="comparison-grid">
+                <!-- 夏桀 -->
+                <article class="profile-card jie">
+                    <div class="profile-header">
+                        <img src="https://picsum.photos/seed/jie/100/100" alt="夏桀画像" class="avatar">
+                        <div class="profile-info">
+                            <h3>夏桀</h3>
+                            <span class="title">夏朝末代君主 / 在位约前1647-前1600年</span>
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <h4>统治概况</h4>
+                        <p>夏桀，名履葵，史称“桀”。据《史记》记载，桀是夏朝第16代王，也是最后一位君主。他外表英俊但内心残忍，以才智自傲，认为自己的力量可以比得上太阳。他宠信妹喜，大兴土木，荒废朝政，导致夏朝国力衰退。</p>
+                        <h4>最终结局</h4>
+                        <p>夏桀在位期间，商汤在西方崛起。夏桀曾试图征伐商汤，结果战败。最终，夏桀被流放至南巢，死于该地，夏朝灭亡。</p>
+                    </div>
+                </article>
+
+                <!-- 商纣 -->
+                <article class="profile-card zhou">
+                    <div class="profile-header">
+                        <img src="https://picsum.photos/seed/zhou/100/100" alt="商纣画像" class="avatar">
+                        <div class="profile-info">
+                            <h3>商纣</h3>
+                            <span class="title">商朝末代君主 / 在位约前1075-前1046年</span>
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <h4>统治概况</h4>
+                        <p>商纣，名受德，世称帝辛，商朝第三十位君主。他力大无穷，能倒曳九头牛，抚梁易柱，具有极高的军事才能。但他统治后期，沉溺酒色，残暴不仁，听信妲己之言，实施炮烙之刑，杀比干、囚箕子，导致诸侯离心。</p>
+                        <h4>最终结局</h4>
+                        <p>面对商纣的暴政，周武王联合诸侯在牧野之战中击败商军。商纣见大势已去，登上鹿台，自焚而死，商朝灭亡，周朝建立。</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 历史脉络 -->
+    <section id="timeline" class="section timeline-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>夏商更替脉络</h2>
+                <p>从盛极一时到王朝覆灭的关键历史节点</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="content-box">
+                        <h3>夏桀时期</h3>
+                        <p>夏朝国力达到顶峰，但政治腐败，民不聊生。夏桀自比太阳，誓言“天上有太阳，就像我有百姓一样，太阳会灭亡，我也才会灭亡”，却最终被百姓诅咒。</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content-box">
+                        <h3>商汤灭夏</h3>
+                        <p>商汤在伊尹、仲虺的辅佐下，修德行仁，征伐不义。在鸣条之战中击败夏桀，建立了商朝，定都亳。</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content-box">
+                        <h3>商朝中兴</h3>
+                        <p>商汤死后，太甲即位后不守成法，被伊尹放逐。三年后伊尹迎回太甲，商朝进入一段稳定发展的时期。</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content-box">
+                        <h3>商纣暴政</h3>
+                        <p>帝辛即位后，征服东夷，疆域扩大。但因穷兵黩武和内部腐败，导致社会矛盾激化，诸侯纷纷背叛。</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content-box">
+                        <h3>牧野之战</h3>
+                        <p>周武王率领诸侯联军伐纣，在牧野（今河南新乡）展开决战。由于商军前徒倒戈，周军大获全胜，商朝灭亡。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 暴政与传说 -->
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>暴政与历史传说</h2>
+                <p>史书与民间传说中关于暴政的典型表现</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🔥</div>
+                    <h3>酒池肉林</h3>
+                    <p>传说商纣为了享乐，命人在宫廷挖池盛满美酒，挂肉为林，让男女裸身在其中追逐嬉戏，通宵达旦，以此形容其荒淫无度。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚔️</div>
+                    <h3>炮烙之刑</h3>
+                    <p>商纣为取悦妲己，发明了炮烙之刑。即在涂满油脂的铜柱上烧红，令犯人行走，犯人滑落火中烫死，以此观看妲己发笑。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎭</div>
+                    <h3>酒池肉林</h3>
+                    <p>传说夏桀曾筑倾宫，修瑶台，耗尽民力财力。他还将妹喜纳入后宫，不仅不理朝政，还为了博红颜一笑而废除法律。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">👁️</div>
+                    <h3>鹿台自焚</h3>
+                    <p>商纣兵败后，自知罪孽深重。他登上鹿台，穿上宝玉衣，自焚而死，结束了其48年的统治生涯。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商周变革 -->
+    <section id="change" class="section change-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>商周变革与历史启示</h2>
+                <p>从“神权政治”到“礼乐文明”的转型</p>
+            </div>
+            <div class="change-grid">
+                <div class="change-text">
+                    <h3>周朝的反思与改革</h3>
+                    <p>周武王灭商后，深刻吸取了夏桀、商纣暴政亡国的教训。周公旦提出“皇天无亲，惟德是辅”的思想，将统治合法性从“天命”转变为“德治”。</p>
+                    <ul>
+                        <li><strong>制礼作乐：</strong> 建立严格的等级制度（周礼），规范社会秩序。</li>
+                        <li><strong>分封制：</strong> 将宗室和功臣分封到各地，以屏藩周室，加强统治。</li>
+                        <li><strong>敬天保民：</strong> 强调统治者要爱护百姓，否则就会失去天命。</li>
+                    </ul>
+                </div>
+                <div class="change-image">
+                    <img src="https://picsum.photos/seed/bronze/600/400" alt="青铜器上的历史纹饰">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问答 FAQ -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+                <p>关于夏桀、商纣及商周变革的常见疑问</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">桀和纣真的是一无是处的暴君吗？</div>
+                    <div class="faq-answer">
+                        <p>现代历史学家倾向于认为，桀和纣并非单纯的“白痴”或“恶魔”。商纣在位期间曾征服东夷，扩大了商朝的版图，对中华文明的早期融合有积极贡献。他们的失败更多是因为长期战争导致的社会经济崩溃以及统治集团内部的腐败。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">妲己是导致商朝灭亡的真正原因吗？</div>
+                    <div class="faq-answer">
+                        <p>妲己作为商纣的宠妃，在传说和文学作品中常被描绘成祸国殃民的妖妃。但从历史角度看，商朝的灭亡是长期政治腐败、军事失利及天灾人祸共同作用的结果，妲己更多是作为暴政的象征被后世文人墨客借题发挥。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">“桀纣”一词在现代汉语中有什么含义？</div>
+                    <div class="faq-answer">
+                        <p>“桀纣”已成为中国传统文化中暴君的代名词。现在常用来形容那些残暴无道、失去民心的统治者或极端的腐败分子。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p>本站致力于提供严谨、客观的中国古代历史资料，特别是关于夏商周断代工程及商周变革的深度解读。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#profiles">人物档案</a></li>
+                        <li><a href="#timeline">历史脉络</a></li>
+                        <li><a href="#change">商周变革</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>参考资料</h4>
+                    <ul>
+                        <li><a href="#">史记·夏本纪</a></li>
+                        <li><a href="#">史记·殷本纪</a></li>
+                        <li><a href="#">尚书</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 桀纣历史研究专题. All Rights Reserved. 本页面内容仅供历史研究与学习参考。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 折叠逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // 减去导航栏高度
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+                      </html>
